@@ -8,14 +8,30 @@
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
         android:textStyle="bold"
         android:text="TextView" />
 
-    <TextView
-        android:id="@+id/tvPaginas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15dp"
-        android:text="TextView" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitleNumPaginas"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:text="num. páginas:"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvPaginas"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:text="TextView"
+            android:textSize="20sp" />
+
+    </LinearLayout>
 </LinearLayout>
