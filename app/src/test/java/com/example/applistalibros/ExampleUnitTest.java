@@ -1,4 +1,4 @@
-package com.example.applistadapters;
+package com.example.applistalibros;
 
 import org.junit.Test;
 

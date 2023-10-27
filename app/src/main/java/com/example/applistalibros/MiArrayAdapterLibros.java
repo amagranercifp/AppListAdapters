@@ -1,11 +1,15 @@
-package com.example.applistadapters;
+package com.example.applistalibros;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -30,12 +34,28 @@ public class MiArrayAdapterLibros extends ArrayAdapter<Datos> {
         Datos libro = libros.get(position);
 
         TextView tvTitulo,tvPaginas;
+        ImageView ivPortada;
+        CheckBox star;
 
         tvTitulo = (TextView) rowView.findViewById(R.id.tvTitulo);
         tvPaginas = (TextView)  rowView.findViewById(R.id.tvPaginas);
+        ivPortada = (ImageView)  rowView.findViewById(R.id.ivPortada);
+
+        star = (CheckBox)  rowView.findViewById(R.id.cbStar);
 
         tvTitulo.setText(libro.getTitulo());
         tvPaginas.setText(String.valueOf(libro.getPaginas()));
+
+        ivPortada.setImageResource(libro.getPortada());
+
+        star.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    Toast.makeText(getContext(),libro.getTitulo(), Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         return rowView;
 

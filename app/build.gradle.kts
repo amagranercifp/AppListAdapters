@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.applistadapters"
+    namespace = "com.example.applistalibros"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.applistadapters"
+        applicationId = "com.example.applistalibros"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

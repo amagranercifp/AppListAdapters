@@ -1,4 +1,4 @@
-package com.example.applistadapters;
+package com.example.applistalibros;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ArrayList<Datos> libros = new ArrayList<>();
-        libros.add(new Datos("Acceso a datos",424));
-        libros.add(new Datos("Lenguajes de marcas y sistemas de gestión de la información",416));
-        libros.add(new Datos("Sistemas informáticos y redes locales",226));
-        libros.add(new Datos("Entornos de desarrollo",378));
-        libros.add(new Datos("Administración de sistemas gestores de bases de datos",314));
+        libros.add(new Datos("Acceso a datos",424, R.drawable.acceso_datos));
+        libros.add(new Datos("Lenguajes de marcas y sistemas de gestión de la información",416,R.drawable.lenguaje_marcas ));
+        libros.add(new Datos("Sistemas informáticos y redes locales",226, R.drawable.sistemas_informaticos));
+        libros.add(new Datos("Entornos de desarrollo",378, R.drawable.entornos));
+        libros.add(new Datos("Administración de sistemas gestores de bases de datos",314, R.drawable.administracion_bases));
 
         lvLibros =  findViewById(R.id.lvLibros);
         adaptadorLibro = new MiArrayAdapterLibros(this,libros);
@@ -40,5 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
 }
