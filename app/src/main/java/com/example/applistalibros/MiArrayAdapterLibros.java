@@ -46,6 +46,8 @@ public class MiArrayAdapterLibros extends ArrayAdapter<Datos> {
         tvTitulo.setText(libro.getTitulo());
         tvPaginas.setText(String.valueOf(libro.getPaginas()));
 
+        int portada = libro.getPortada();
+
         ivPortada.setImageResource(libro.getPortada());
 
         star.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
